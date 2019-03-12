@@ -1,4 +1,4 @@
-package ru.soltrix.users;
+package ru.soltrix.users.overflow;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,10 +14,11 @@ import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import ru.soltrix.users.R;
 
 public class UserRecycleAdapter extends RecyclerView.Adapter<UserRecycleAdapter.UserViewHolder> {
 
-    private ArrayList<User> userList = new ArrayList<>();
+    private ArrayList<UserOverflow> userList = new ArrayList<>();
     private LoadMoreListener loadMoreListener;
 
     @NonNull
@@ -30,7 +31,7 @@ public class UserRecycleAdapter extends RecyclerView.Adapter<UserRecycleAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
-        User user = userList.get(position);
+        UserOverflow user = userList.get(position);
         holder.name.setText(user.getName());
         Glide.with(holder.itemView.getContext())
                 .load(user.getAvatar())
@@ -49,7 +50,7 @@ public class UserRecycleAdapter extends RecyclerView.Adapter<UserRecycleAdapter.
         return userList.size();
     }
 
-    public void addUsers(List<User> users) {
+    public void addUsers(List<UserOverflow> users) {
         int lastPosition = getItemCount();
         userList.addAll(users);
         notifyItemRangeInserted(lastPosition, users.size());
