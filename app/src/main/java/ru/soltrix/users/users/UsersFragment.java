@@ -35,7 +35,7 @@ public class UsersFragment extends Fragment {
 
         Bundle args = new Bundle();
         args.putBoolean(GITHUB, isGitHub);
-        
+
         UsersFragment fragment = new UsersFragment();
         fragment.setArguments(args);
         return fragment;
