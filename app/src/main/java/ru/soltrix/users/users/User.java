@@ -1,16 +1,14 @@
-package ru.soltrix.users.overflow;
-
-import com.google.gson.annotations.SerializedName;
+package ru.soltrix.users.users;
 
 import java.util.Objects;
 
-public class UserOverflow {
+public final class User {
 
-    @SerializedName("display_name") private String name;
-    @SerializedName("profile_image") private String avatar;
-    @SerializedName("account_id") private long userId;
+    private String name;
+    private String avatar;
+    private long userId;
 
-    public UserOverflow(String name, String avatar, long userId) {
+    public User(String name, String avatar, long userId) {
         this.name = name;
         this.avatar = avatar;
         this.userId = userId;
@@ -32,7 +30,7 @@ public class UserOverflow {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        UserOverflow user = (UserOverflow) o;
+        User user = (User) o;
         return Objects.equals(name, user.name) &&
                 Objects.equals(avatar, user.avatar);
     }

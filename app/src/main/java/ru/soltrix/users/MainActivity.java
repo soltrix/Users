@@ -5,7 +5,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
-import ru.soltrix.users.overflow.StackOverflowUsersFragment;
+import ru.soltrix.users.users.UsersFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.container, new GitHubUsersFragment())
+                    .add(R.id.container, UsersFragment.newInstance(true))
                     .commit();
         }
     }
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_settings) {
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.container, new StackOverflowUsersFragment())
+                    .replace(R.id.container, UsersFragment.newInstance(false))
                     .addToBackStack("BackStack")
                     .commit();
             return true;

@@ -1,4 +1,4 @@
-package ru.soltrix.users;
+package ru.soltrix.users.users.github;
 
 import java.util.List;
 
@@ -9,5 +9,5 @@ import retrofit2.http.Query;
 public interface GitHubService {
 
     @GET("users")
-    Call<List<User>> getUsers(@Query("since") long id);
+    Call<List<GitHubUser>> getUsers(@Query("since") long id);
 }
