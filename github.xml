@@ -1,0 +1,7 @@
+<application>
+  <component name="GithubAccounts">
+    <account id="aa4e8a75-b875-4810-bf6b-168b17370ec8" name="soltrix">
+      <server host="github.com" />
+    </account>
+  </component>
+</application>
