@@ -9,7 +9,7 @@ import retrofit2.Response;
 import ru.soltrix.users.Model;
 import ru.soltrix.users.users.User;
 
-public class GitHubUsersModel implements Model{
+public class GitHubUsersModel implements Model {
 
     private GitHubService gitHubService;
 

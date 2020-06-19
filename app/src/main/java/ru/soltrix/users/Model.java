@@ -10,6 +10,7 @@ public interface Model {
 
     public interface ModelResponse<T> {
         public void onSuccess(T response);
+
         public void onError(Throwable error);
     }
 }
